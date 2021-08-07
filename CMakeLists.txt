@@ -4,6 +4,7 @@
 
 # Add scripts in project
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/World/StartUp.cpp")
+AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Player/Welcome.cpp")
 
 # Add scripts to script loader
 AC_ADD_SCRIPT_LOADER("ModProgressiveLoading" "${CMAKE_CURRENT_LIST_DIR}/src/mod_progressive_loading_loader.h")

@@ -9,3 +9,11 @@
 #        Default:     4125  - (Launch)
 
 ProgressiveLoading.Patch = 4125
+
+#
+#    Welcome
+#        Description: Announce to players on login which patch is currently being emulated.
+#        Default:     1 - (Enabled)
+#                     0 - (Disabled)
+
+ProgressiveLoading.Welcome = 1
