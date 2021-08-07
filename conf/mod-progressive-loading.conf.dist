@@ -1,17 +1,11 @@
-#
-# Copyright (C) 2016+ AzerothCore <www.azerothcore.org>, released under GNU AGPL v3 license: https://github.com/azerothcore/azerothcore-wotlk/blob/master/LICENSE-AGPL3
-#
-
 [worldserver]
 
 ########################################
-# My module configuration
+# Progressive Loading Configuration
 ########################################
 #
-#    MyModule.Enable
-#        Description: Enable my module and print "Hello World" message at server start
-#        Default:     0 - Disabled
-#                     1 - Enabled
-#
+#    Patch
+#        Description: The Patch to load as which controls creature templates, items, quests available, spawns, disables etc.
+#        Default:     4125  - (Launch)
 
-MyModule.Enable = 0
+ProgressiveLoading.Patch = 4125
