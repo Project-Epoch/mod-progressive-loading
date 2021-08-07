@@ -77,5 +77,24 @@ CALL CreateColumnIfNotExists('creature_addon', 'patch', 'smallint', '4125');
 ALTER TABLE creature_addon DROP PRIMARY KEY;
 ALTER TABLE creature_addon ADD PRIMARY KEY (`guid`, `patch`);
 
+-- Game Object Template
+CALL CreateColumnIfNotExists('gameobject_template', 'patch', 'smallint', '4125');
+ALTER TABLE gameobject_template DROP PRIMARY KEY;
+ALTER TABLE gameobject_template ADD PRIMARY KEY (`entry`, `patch`);
+
+-- Game Object Template Addon
+CALL CreateColumnIfNotExists('gameobject_template_addon', 'patch', 'smallint', '4125');
+ALTER TABLE gameobject_template_addon DROP PRIMARY KEY;
+ALTER TABLE gameobject_template_addon ADD PRIMARY KEY (`entry`, `patch`);
+
+-- Game Object
+CALL CreateColumnIfNotExists('gameobject', 'patch_min', 'smallint', '4125');
+CALL CreateColumnIfNotExists('gameobject', 'patch_max', 'smallint', '12340');
+
+-- Game Object Addon
+CALL CreateColumnIfNotExists('gameobject_addon', 'patch', 'smallint', '4125');
+ALTER TABLE gameobject_addon DROP PRIMARY KEY;
+ALTER TABLE gameobject_addon ADD PRIMARY KEY (`guid`, `patch`);
+
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 
