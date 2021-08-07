@@ -96,5 +96,15 @@ CALL CreateColumnIfNotExists('gameobject_addon', 'patch', 'smallint', '4125');
 ALTER TABLE gameobject_addon DROP PRIMARY KEY;
 ALTER TABLE gameobject_addon ADD PRIMARY KEY (`guid`, `patch`);
 
+-- Item Template
+CALL CreateColumnIfNotExists('item_template', 'patch', 'smallint', '4125');
+ALTER TABLE item_template DROP PRIMARY KEY;
+ALTER TABLE item_template ADD PRIMARY KEY (`entry`, `patch`);
+
+-- Item Set Names
+CALL CreateColumnIfNotExists('item_set_names', 'patch', 'smallint', '4125');
+ALTER TABLE item_set_names DROP PRIMARY KEY;
+ALTER TABLE item_set_names ADD PRIMARY KEY (`entry`, `patch`);
+
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 
