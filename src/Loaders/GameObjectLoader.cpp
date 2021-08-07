@@ -3,8 +3,6 @@
 
 void GameObjectLoader::OnBeforeGameObjectTemplateQueried(std::string& query)
 {
-    sLog->outError("OnBeforeGameObjectTemplateQueried Fired");
-
     std::string table = "gameobject_template";
     std::string field = "entry";
 
@@ -18,9 +16,7 @@ void GameObjectLoader::OnBeforeGameObjectTemplateQueried(std::string& query)
 }
 
 void GameObjectLoader::OnBeforeGameObjectTemplateAddonQueried(std::string& query)
-{
-    sLog->outError("OnBeforeGameObjectTemplateAddonQueried Fired");
-    
+{    
     std::string table = "gameobject_template_addon";
     std::string field = "entry";
 

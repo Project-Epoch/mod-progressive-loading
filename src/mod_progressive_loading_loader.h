@@ -5,6 +5,9 @@
 #include "./Player/Welcome.h"
 #include "./Loaders/CreatureLoader.h"
 #include "./Loaders/GameObjectLoader.h"
+#include "./Loaders/ItemLoader.h"
+#include "./Loaders/TransportLoader.h"
+#include "./Loaders/DisablesLoader.h"
 
 // Add all
 void AddModProgressiveLoadingScripts()
@@ -15,6 +18,9 @@ void AddModProgressiveLoadingScripts()
     /** Loaders */
     new CreatureLoader();
     new GameObjectLoader();
+    new ItemLoader();
+    new TransportLoader();
+    new DisablesLoader();
 }
 
 #endif // _MOD_PROGRESSIVE_LOADING_LOADER_H_

@@ -104,5 +104,9 @@ ALTER TABLE item_template ADD PRIMARY KEY (`entry`, `patch`);
 -- Transports
 CALL CreateColumnIfNotExists('transports', 'patch', 'smallint', '4125');
 
+-- Disables
+CALL CreateColumnIfNotExists('disables', 'patch_min', 'smallint', '4125');
+CALL CreateColumnIfNotExists('disables', 'patch_max', 'smallint', '12340');
+
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 
