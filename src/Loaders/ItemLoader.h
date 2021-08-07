@@ -1,3 +1,5 @@
+#ifndef _MOD_PROGRESSIVE_LOADING_ITEM_LOADER_H_
+#define _MOD_PROGRESSIVE_LOADING_ITEM_LOADER_H_
 
 #include "ScriptMgr.h"
 
@@ -21,3 +23,5 @@ public:
      */
     void OnBeforeLootTemplateQueried(std::string& query, std::string lootStoreName) override;
 };
+
+#endif
