@@ -38,15 +38,3 @@ void ItemLoader::OnBeforeLootTemplateQueried(std::string& query, std::string loo
         sProgression->GetCurrentPatch()
     );
 }
-
-void ItemLoader::OnBeforeItemSetNamesQueried(std::string& query)
-{
-    std::string table = "item_set_names";
-    std::string field = "entry";
-
-    query = Acore::StringFormat(
-        "SELECT entry, name, InventoryType "
-        "FROM %s t1 WHERE patch=(SELECT max(patch) FROM %s t2 WHERE t1.%s=t2.%s && patch <= %u)",
-        table, table, field, field, sProgression->GetCurrentPatch()
-    );
-}

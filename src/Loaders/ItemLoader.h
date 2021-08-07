@@ -20,11 +20,4 @@ public:
      * @param lootStoreName
      */
     void OnBeforeLootTemplateQueried(std::string& query, std::string lootStoreName) override;
-
-    /**
-     * @brief Override the `item_set_names` query with a progressive version.
-     * 
-     * @param query 
-     */
-    void OnBeforeItemSetNamesQueried(std::string& query) override;
 };
