@@ -2,6 +2,7 @@
 #define _MOD_PROGRESSIVE_LOADING_LOADER_H_
 
 #include "./World/StartUp.h"
+#include "./World/OverrideExpansion.h"
 #include "./Player/Welcome.h"
 #include "./Loaders/CreatureLoader.h"
 #include "./Loaders/GameObjectLoader.h"
@@ -13,8 +14,10 @@
 // Add all
 void AddModProgressiveLoadingScripts()
 {
+    /** World Scripts */
     new StartUp();
     new Welcome();
+    new OverrideExpansion();
 
     /** Loaders */
     new CreatureLoader();
