@@ -8,6 +8,7 @@
 #include "./Loaders/ItemLoader.h"
 #include "./Loaders/TransportLoader.h"
 #include "./Loaders/DisablesLoader.h"
+#include "./Loaders/GameEventLoader.h"
 
 // Add all
 void AddModProgressiveLoadingScripts()
@@ -21,6 +22,7 @@ void AddModProgressiveLoadingScripts()
     new ItemLoader();
     new TransportLoader();
     new DisablesLoader();
+    new GameEventLoader();
 }
 
 #endif // _MOD_PROGRESSIVE_LOADING_LOADER_H_

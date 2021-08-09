@@ -107,6 +107,20 @@ CALL CreateColumnIfNotExists('transports', 'patch', 'smallint', '4125');
 -- Disables
 CALL CreateColumnIfNotExists('disables', 'patch_min', 'smallint', '4125');
 CALL CreateColumnIfNotExists('disables', 'patch_max', 'smallint', '12340');
+ALTER TABLE disables DROP PRIMARY KEY;
+ALTER TABLE disables ADD PRIMARY KEY (`sourceType`, `entry`, `patch_min`, `patch_max`);
+
+-- Game Events
+CALL CreateColumnIfNotExists('game_event', 'patch', 'smallint', '4125');
+ALTER TABLE game_event DROP PRIMARY KEY;
+ALTER TABLE game_event ADD PRIMARY KEY (`eventEntry`, `patch`);
+
+-- Holiday Dates
+CALL CreateColumnIfNotExists('holiday_dates', 'patch_min', 'smallint', '4125');
+CALL CreateColumnIfNotExists('holiday_dates', 'patch_max', 'smallint', '12340');
+CALL CreateColumnIfNotExists('holiday_dates', 'comment', 'varchar(255)', '');
+ALTER TABLE holiday_dates DROP PRIMARY KEY;
+ALTER TABLE holiday_dates ADD PRIMARY KEY (`id`, `date_id`, `patch_min`, `patch_max`);
 
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 
