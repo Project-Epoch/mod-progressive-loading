@@ -127,5 +127,10 @@ CALL CreateColumnIfNotExists('areatrigger_teleport', 'patch', 'smallint', '4125'
 ALTER TABLE areatrigger_teleport DROP PRIMARY KEY;
 ALTER TABLE areatrigger_teleport ADD PRIMARY KEY (`ID`, `patch`);
 
+-- Battleground Template
+CALL CreateColumnIfNotExists('battleground_template', 'patch', 'smallint', '4125');
+ALTER TABLE battleground_template DROP PRIMARY KEY;
+ALTER TABLE battleground_template ADD PRIMARY KEY (`ID`, `patch`);
+
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 

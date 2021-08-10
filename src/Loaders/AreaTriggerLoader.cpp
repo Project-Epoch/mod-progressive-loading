@@ -3,8 +3,6 @@
 
 void AreaTriggerLoader::OnBeforeAreaTriggerTeleportsQueried(std::string& query)
 {
-    sLog->outError("OnBeforeAreaTriggerTeleportsQueried Fired...");
-
     std::string table = "areatrigger_teleport";
     std::string field = "ID";
 

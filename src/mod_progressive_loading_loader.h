@@ -12,6 +12,7 @@
 #include "./Loaders/DisablesLoader.h"
 #include "./Loaders/GameEventLoader.h"
 #include "./Loaders/AreaTriggerLoader.h"
+#include "./Loaders/BattlegroundLoader.h"
 
 // Add all
 void AddModProgressiveLoadingScripts()
@@ -32,6 +33,7 @@ void AddModProgressiveLoadingScripts()
     new DisablesLoader();
     new GameEventLoader();
     new AreaTriggerLoader();
+    new BattlegroundLoader();
 }
 
 #endif // _MOD_PROGRESSIVE_LOADING_LOADER_H_

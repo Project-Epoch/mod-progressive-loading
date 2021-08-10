@@ -20,6 +20,8 @@ bool PatchCondition::OnConditionCheck(Condition* condition, ConditionSourceInfo&
         case 2: // Less Than or Equal To <=
             return sProgression->GetCurrentPatch() <= patch;
     }
+
+    return false;
 }
 
 bool PatchCondition::IsValid(Condition* condition, uint32 patch, uint32 comparison)
