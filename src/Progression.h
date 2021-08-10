@@ -50,15 +50,22 @@ enum Patches
  */
 class Progression
 {
+private:
+    uint16 _currentPatch = 0;
 public:
     /**
      * @brief Get the integer representation of the current "Patch" that we have loaded.
      * 
-     * @return int16 
+     * @return uint16 
      */
-    inline int16 GetCurrentPatch()
+    inline uint16 GetCurrentPatch()
     {
-        return sConfigMgr->GetOption<int16>("ProgressiveLoading.Patch", 12340);
+        if (_currentPatch == 0)
+        {
+            _currentPatch = sConfigMgr->GetOption<uint16>("ProgressiveLoading.Patch", 12340);
+        }
+
+        return _currentPatch;
     }
 
     /**
