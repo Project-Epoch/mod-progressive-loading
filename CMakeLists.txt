@@ -6,6 +6,9 @@
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/World/StartUp.cpp")
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Player/Welcome.cpp")
 
+# Conditions
+AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Conditions/PatchCondition.cpp")
+
 # Loaders
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/CreatureLoader.cpp")
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/GameObjectLoader.cpp")

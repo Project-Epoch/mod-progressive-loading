@@ -4,6 +4,7 @@
 #include "./World/StartUp.h"
 #include "./World/OverrideExpansion.h"
 #include "./Player/Welcome.h"
+#include "./Conditions/PatchCondition.h"
 #include "./Loaders/CreatureLoader.h"
 #include "./Loaders/GameObjectLoader.h"
 #include "./Loaders/ItemLoader.h"
@@ -18,6 +19,9 @@ void AddModProgressiveLoadingScripts()
     new StartUp();
     new Welcome();
     new OverrideExpansion();
+
+    /** Conditions*/
+    new PatchCondition();
 
     /** Loaders */
     new CreatureLoader();
