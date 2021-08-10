@@ -118,7 +118,7 @@ ALTER TABLE game_event ADD PRIMARY KEY (`eventEntry`, `patch`);
 -- Holiday Dates
 CALL CreateColumnIfNotExists('holiday_dates', 'patch_min', 'smallint', '4125');
 CALL CreateColumnIfNotExists('holiday_dates', 'patch_max', 'smallint', '12340');
-CALL CreateColumnIfNotExists('holiday_dates', 'comment', 'varchar(255)', '');
+CALL CreateColumnIfNotExists('holiday_dates', 'comment', 'varchar(255)', "''");
 ALTER TABLE holiday_dates DROP PRIMARY KEY;
 ALTER TABLE holiday_dates ADD PRIMARY KEY (`id`, `date_id`, `patch_min`, `patch_max`);
 
