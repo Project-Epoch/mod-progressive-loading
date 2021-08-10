@@ -3,8 +3,6 @@
 
 void GameEventLoader::OnBeforeGameEventsQueried(std::string& query)
 {
-    sLog->outError("OnBeforeGameEventsQueried Fired...");
-
     std::string table = "game_event";
     std::string field = "eventEntry";
 
@@ -17,8 +15,6 @@ void GameEventLoader::OnBeforeGameEventsQueried(std::string& query)
 
 void GameEventLoader::OnBeforeHolidayDatesQueried(std::string& query)
 {
-    sLog->outError("OnBeforeHolidayDatesQueried Fired...");
-
     std::string table = "holiday_dates";
     std::string field = "id";
     std::string min = "patch_min";

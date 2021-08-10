@@ -122,5 +122,10 @@ CALL CreateColumnIfNotExists('holiday_dates', 'comment', 'varchar(255)', "''");
 ALTER TABLE holiday_dates DROP PRIMARY KEY;
 ALTER TABLE holiday_dates ADD PRIMARY KEY (`id`, `date_id`, `patch_min`, `patch_max`);
 
+-- Area Trigger Teleport
+CALL CreateColumnIfNotExists('areatrigger_teleport', 'patch', 'smallint', '4125');
+ALTER TABLE areatrigger_teleport DROP PRIMARY KEY;
+ALTER TABLE areatrigger_teleport ADD PRIMARY KEY (`ID`, `patch`);
+
 -- End Script
 DROP PROCEDURE IF EXISTS `CreateColumnIfNotExists`; 

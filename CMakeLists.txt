@@ -16,6 +16,7 @@ AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/ItemLoader.cpp")
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/TransportLoader.cpp")
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/DisablesLoader.cpp")
 AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/GameEventLoader.cpp")
+AC_ADD_SCRIPT("${CMAKE_CURRENT_LIST_DIR}/src/Loaders/AreaTriggerLoader.cpp")
 
 # Add scripts to script loader
 AC_ADD_SCRIPT_LOADER("ModProgressiveLoading" "${CMAKE_CURRENT_LIST_DIR}/src/mod_progressive_loading_loader.h")

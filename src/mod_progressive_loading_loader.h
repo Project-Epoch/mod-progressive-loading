@@ -11,6 +11,7 @@
 #include "./Loaders/TransportLoader.h"
 #include "./Loaders/DisablesLoader.h"
 #include "./Loaders/GameEventLoader.h"
+#include "./Loaders/AreaTriggerLoader.h"
 
 // Add all
 void AddModProgressiveLoadingScripts()
@@ -30,6 +31,7 @@ void AddModProgressiveLoadingScripts()
     new TransportLoader();
     new DisablesLoader();
     new GameEventLoader();
+    new AreaTriggerLoader();
 }
 
 #endif // _MOD_PROGRESSIVE_LOADING_LOADER_H_
