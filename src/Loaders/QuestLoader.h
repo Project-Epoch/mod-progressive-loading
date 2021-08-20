@@ -15,8 +15,9 @@ public:
      */
     void OnBeforeQuestTemplatesQueried(std::string& query) override;
 
+    void OnBeforeQuestTemplateAddonsQueried(std::string& query) override;
+
     // quest template addon
-    // quest details
     // quest request items
     // quest offer reward
 };

@@ -5,8 +5,8 @@ void QuestLoader::OnBeforeQuestTemplatesQueried(std::string& query)
 {
     sLog->outError("OnBeforeQuestTemplatesQueried Fired...");
 
-    std::string table = "quest_template";
-    std::string field = "ID";
+    const std::string table = "quest_template";
+    const std::string field = "ID";
 
     query = Acore::StringFormat(
         "SELECT "
@@ -24,6 +24,23 @@ void QuestLoader::OnBeforeQuestTemplatesQueried(std::string& query)
         "RequiredItemId1, RequiredItemId2, RequiredItemId3, RequiredItemId4, RequiredItemId5, RequiredItemId6, RequiredItemCount1, RequiredItemCount2, RequiredItemCount3, RequiredItemCount4, RequiredItemCount5, RequiredItemCount6, "
         "Unknown0, ObjectiveText1, ObjectiveText2, ObjectiveText3, ObjectiveText4 "
         "FROM %s t1 WHERE patch=(SELECT max(patch) FROM %s t2 WHERE t1.%s=t2.%s && patch <= %u)",
+        table, table, field, field, sProgression->GetCurrentPatch()
+    );
+}
+
+void QuestLoader::OnBeforeQuestTemplateAddonsQueried(std::string& query)
+{
+    sLog->outError("OnBeforeQuestTemplateAddonsQueried Fired...");
+
+    const std::string table = "quest_template_addon";
+    const std::string field = "ID";
+
+    // WIP CONSULT ARRON
+    query = Acore::StringFormat(
+        "SELECT ID, MaxLevel, AllowableClasses, SourceSpellID, PrevQuestID, NextQuestID, ExclusiveGroup, RewardMailTemplateID, RewardMailDelay, "
+        "RequiredSkillID, RequiredSkillPoints, RequiredMinRepFaction, RequiredMaxRepFaction, RequiredMinRepValue, RequiredMaxRepValue, ProvidedItemCount, RewardMailSenderEntry, SpecialFlags "
+        "FROM %s t1 WHERE patch=(SELECT max(patch) FROM %s t2 WHERE t1.%s=t2.%s && patch <= %u) "
+        "LEFT JOIN quest_mail_sender ON ID=QuestId",
         table, table, field, field, sProgression->GetCurrentPatch()
     );
 }

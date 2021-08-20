@@ -137,15 +137,15 @@ CALL CreateColumnIfNotExists('quest_template', 'patch', 'smallint', '4125');
 ALTER TABLE quest_template DROP PRIMARY KEY;
 ALTER TABLE quest_template ADD PRIMARY KEY (`ID`, `patch`);
 
--- Quest Template Addon
-CALL CreateColumnIfNotExists('quest_template_addon', 'patch', 'smallint', '4125');
-ALTER TABLE quest_template_addon DROP PRIMARY KEY;
-ALTER TABLE quest_template_addon ADD PRIMARY KEY (`ID`, `patch`);
+-- Quest Mail Sender
+CALL CreateColumnIfNotExists('quest_mail_sender', 'patch', 'smallint', '4125');
+ALTER TABLE quest_mail_sender DROP PRIMARY KEY;
+ALTER TABLE quest_mail_sender ADD PRIMARY KEY (`QuestId`, `patch`);
 
--- Quest Details
-CALL CreateColumnIfNotExists('quest_details', 'patch', 'smallint', '4125');
-ALTER TABLE quest_details DROP PRIMARY KEY;
-ALTER TABLE quest_details ADD PRIMARY KEY (`ID`, `patch`);
+-- Quest Offer Reward
+CALL CreateColumnIfNotExists('quest_offer_reward', 'patch', 'smallint', '4125');
+ALTER TABLE quest_offer_reward DROP PRIMARY KEY;
+ALTER TABLE quest_offer_reward ADD PRIMARY KEY (`ID`, `patch`);
 
 -- Quest Request Items
 CALL CreateColumnIfNotExists('quest_request_items', 'patch', 'smallint', '4125');
